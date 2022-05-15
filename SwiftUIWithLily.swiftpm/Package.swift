@@ -8,18 +8,18 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "LilyApp",
+    name: "SwiftUIWithLily",
     platforms: [
         .iOS("15.2")
     ],
     products: [
         .iOSApplication(
-            name: "LilyApp",
+            name: "SwiftUIWithLily",
             targets: ["AppModule"],
-            bundleIdentifier: "net.kengolab.playground-test-app",
-            teamIdentifier: "YC4UJA55P2",
-            displayVersion: "1.1",
-            bundleVersion: "4",
+            bundleIdentifier: "jp.co.wdkk.SwiftUIWithLily",
+            teamIdentifier: "N6DRT9P33S",
+            displayVersion: "1.0",
+            bundleVersion: "1",
             iconAssetName: "AppIcon",
             accentColorAssetName: "AccentColor",
             supportedDeviceFamilies: [
@@ -35,13 +35,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/wdkk/LilySwift.git", "4.5.26"..<"5.0.0")
+        .package(url: "https://github.com/wdkk/LilySwift.git", "4.0.0"..<"5.0.0")
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
             dependencies: [
-                .product(name: "LilySwift", package: "LilySwift")
+                .product(name: "LilySwift", package: "lilyswift")
             ],
             path: "."
         )
